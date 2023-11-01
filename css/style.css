@@ -187,6 +187,12 @@ header img {
   width: 61.09px;
   height: 19px;
   padding: 30px;
+  padding-left: 0px;
+}
+
+header .fa-info{
+  border: black 1px solid;
+  border-radius: 5px;
 }
 
 .hebergementsActivites{
@@ -198,15 +204,19 @@ header img {
 
 .hebergementsActivites li{
   padding-top: 25px;
+  border-top: 2px solid transparent ;
 }
 
-.hebergementsActivites li:hover {
-color: blue ;
-border-top: 2px solid blue ;
+.hebergementsActivites li:hover,
+.hebergementsActivites li:focus {
+color: var(--main-color) ;
+border-color: var(--main-color) ;
 }
 
 form{
   display: flex;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 form .fa-solid{
@@ -216,7 +226,8 @@ form .fa-solid{
   border-bottom-left-radius: 15px;
   background-color: var(--main-bg-color);
   font-size: 18px;
-  text-align: center
+  text-align: center;
+  border: solid 2px var(--main-bg-color);
 }
 
 form input{
@@ -224,6 +235,10 @@ form input{
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+  border-left: none;
+  border-right: none;
+  border-top: solid 2px var(--main-bg-color);
+  border-bottom: solid 2px var(--main-bg-color);
 }
 
 form button{
@@ -234,6 +249,7 @@ form button{
   border-bottom-right-radius: 15px;
   font-size: 18px;
   font-weight: bold;
+  border: solid 2px var(--main-color);
 }
 
 form i{
@@ -243,6 +259,7 @@ form i{
 .filters {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 }
 
 .filters ul {
@@ -263,4 +280,60 @@ form i{
 
 .filters ul li:hover {
   background-color: var(--filter-bg-color);
+}
+
+.hebergements {
+  margin-bottom: 50px;
+}
+
+.hebergements article {
+  display: flex;
+  width: 250.33 px;
+  height: 207.25px;
+  justify-content: space-between;
+}
+
+.hebergements img {
+  width: 250.33px;
+  height: 124px;
+  object-fit: cover;
+}
+
+.activities ul {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.activities ul li {
+  margin-right: 30px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  padding: 20px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 10px;
+}
+
+.activities img{
+  width: 297.5px;
+  height: 380px ;
+  object-fit: cover;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: left;
+  background-color: var(--main-bg-color);
+  padding-left: 20px;
+} 
+
+footer ul li{
+  width: 100%;
+  padding-right: 446.67px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
