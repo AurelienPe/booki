@@ -416,7 +416,7 @@ footer ul li{
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   /* ... */
-  header{
+  header:not(.hebergementsActivites) {
     padding: 0 20px;
   }
 
@@ -427,16 +427,19 @@ footer ul li{
   .hebergementsActivites{
     width: 100%;
     float: none;
+    gap: 0px;
   }
 
   .hebergementsActivites li{
     padding-top: 0;
     border-top: 0;
     padding-bottom: 25px;
-    border-bottom: 2px solid transparent;
+    border-bottom: 2px solid var(--main-bg-color);
     padding-left: calc((100% - 20px) / 6);
     padding-right: calc((100% - 20px) / 6);
   }
+
+  
 
   .main-container {
     padding: 0;
