@@ -229,6 +229,7 @@ form i{
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+  align-items: baseline;
 }
 
 .filters ul {
@@ -236,13 +237,14 @@ form i{
   flex-wrap: wrap;
   gap: 15px;
   margin-left: 15px;
+  height: 50px;
 }
 
 .filters li{
   display: flex;
   border: 1px solid gray;
   padding: 15px;
-  border-radius: 25px;
+  border-radius: 30px;
   align-items: center;
 }
 
@@ -252,12 +254,17 @@ form i{
 
 .filters li:hover {
   background-color: var(--filter-bg-color);
+  cursor: pointer;
 }
 
 .hebergements article {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+
+.hebergements h2{
+  margin-top: 0;
 }
 
 .hebergements h3{
@@ -353,7 +360,7 @@ footer section{
   padding: 20px;
 }/* faire avec un gap comme dans la maquette */
 
-footer ul li{
+footer li{
   width: 100%;
   padding-top: 15px;
 }
@@ -368,6 +375,10 @@ footer ul li{
 
   .filters{
     display: block;
+  }
+
+  .filters ul{
+    height: auto;
   }
 
   .filters ul li:first-child {
@@ -416,7 +427,7 @@ footer ul li{
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   /* ... */
-  header:not(.hebergementsActivites) {
+  nav ~ * {
     padding: 0 20px;
   }
 
@@ -430,13 +441,16 @@ footer ul li{
     gap: 0px;
   }
 
+  nav ul{
+    text-align: center;
+  }
+
   .hebergementsActivites li{
     padding-top: 0;
     border-top: 0;
     padding-bottom: 25px;
     border-bottom: 2px solid var(--main-bg-color);
-    padding-left: calc((100% - 20px) / 6);
-    padding-right: calc((100% - 20px) / 6);
+    width: 50%;
   }
 
   
